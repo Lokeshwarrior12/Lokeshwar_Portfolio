@@ -319,7 +319,7 @@ Object.keys(LINKS).forEach(function(k){var a=document.createElement("a");a.href=
 if(k!=="email"){a.target="_blank";a.rel="noopener"}a.innerHTML='<svg viewBox="0 0 24 24">'+ICONS[k]+'</svg>';s.appendChild(a)});
 
 // Media and links: paste data:image URIs (images) and https links here
-var MEDIA={photo:"images/20240717_223749.jpg",advaitaPoster:"images/Advaita.png",advaitaLink:"https://youtu.be/LqM8SwLBsPw",bookCover:"images/Operation_Republic.jpeg",bookLink:"https://www.amazon.in/OPERATION-REPUBLIC-DEMOCRACY-Lokeshwar-Kodipunjula/dp/B0HMWN541P",stockShot:"",stockLink:"https://stockmolecule.vercel.app"};
+var MEDIA={photo:"images/20240717_223749.jpg",advaitaPoster:"images/Advaita.png",advaitaLink:"https://youtu.be/LqM8SwLBsPw",bookCover:"images/Operation_Republic.jpeg",bookLink:"https://www.amazon.in/OPERATION-REPUBLIC-DEMOCRACY-Lokeshwar-Kodipunjula/dp/B0HMWN541P",stockShot:"images/final_overview.png",stockLink:"https://stockmolecule.vercel.app"};
 document.querySelectorAll("[data-img]").forEach(function(el){var u=MEDIA[el.dataset.img];if(u){var im=new Image();im.src=u;im.alt=el.dataset.alt||"";el.textContent="";el.appendChild(im)}});
 document.querySelectorAll("[data-link]").forEach(function(a){var u=MEDIA[a.dataset.link];if(u){a.href=u;a.target="_blank";a.rel="noopener"}else{a.classList.add("off");a.setAttribute("aria-disabled","true");a.insertAdjacentHTML("beforeend"," <small>(link soon)</small>")}});
 // 3D stage tilt with glare
